@@ -33,3 +33,4 @@ async def on_schedule(schedule: Schedule):
 
 # Run the reminder system with debug logging enabled
 reminder.run(log_level=DEBUG)
+```
