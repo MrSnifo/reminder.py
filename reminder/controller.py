@@ -27,11 +27,12 @@ from __future__ import annotations
 from .utils import generate_schedule_id
 from typing import TYPE_CHECKING
 from .schedule import Schedule
+from datetime import datetime
 import asyncio
 
 if TYPE_CHECKING:
     from typing import Callable, Any, List
-    from datetime import datetime
+
 
 import logging
 _logger = logging.getLogger(__name__)
