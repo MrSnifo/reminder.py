@@ -1,7 +1,7 @@
 # reminder.py
 
-[![PyPI - Version](https://img.shields.io/pypi/v/reminder.py)](https://pypi.org/project/reminder.py)
-[![Python Versions](https://img.shields.io/pypi/pyversions/reminder.py)](https://pypi.org/project/reminder.py)
+[![PyPI - Version](https://img.shields.io/pypi/v/reminder.py?color=teal)](https://pypi.org/project/reminder.py)
+[![Python Versions](https://img.shields.io/pypi/pyversions/reminder.py?color=teal)](https://pypi.org/project/reminder.py)
 
 A Python library to manage scheduled reminders, events, and callbacks, designed for asynchronous operations.
 
