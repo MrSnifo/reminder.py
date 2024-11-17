@@ -125,8 +125,8 @@ class Reminder:
         -------
         ```py
         @client.event
-        async def on_ready():
-            print('Ready!')
+        async def on_initiate():
+            ...
         ```
         """
         if not asyncio.iscoroutinefunction(coro):

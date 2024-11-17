@@ -8,7 +8,7 @@ An async schedule reminders with custom event triggers on due time
 """
 
 __title__ = 'reminder.py'
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __license__ = 'MIT License'
 __author__ = 'Snifo'
 __email__ = 'Snifo@mail.com'
