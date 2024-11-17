@@ -62,7 +62,7 @@ class Controller:
         self.__dispatch('initiate')
         while True:
             for schedule in self.schedules:
-                if schedule.ends_at < datetime.now():
+                if not schedule.is_active(datetime.now()):
                     _logger.debug('Schedule "%s" (ID: %s) has ended at %s.',
                                  schedule.title, schedule.id, schedule.ends_at)
                     # Execute each event and handle any exceptions
