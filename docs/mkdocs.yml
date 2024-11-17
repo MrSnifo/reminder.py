@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: reminder.py
+site_url: !!python/object/apply:os.getenv ["READTHEDOCS_CANONICAL_URL"]
+site_author: Snifo
+
+site_description: >-
+  A Python library for real-time event scheduling and reminders. Define schedules and trigger events asynchronously
+  for time-based actions in your applications.
+
+# GitHub repository
+repo_url: https://github.com/mrsnifo/reminder.py
+repo_name: mrsnifo/reminder.py
+copyright: Copyright (c) 2024-present Snifo
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mrsnifo
+
+theme:
+  name: 'material'
+  custom_dir: overrides
+  font:
+    text: Roboto
+  icon:
+    logo: material/timer-alert
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to system preference
+
+  features:
+    - navigation.path
+    - navigation.tabs
+    - navigation.prune
+    - navigation.tracking
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - Getting started:
+      - 'index.md'
+      - Setup: 'setup.md'
+  - Reference:
+      - Client: 'reference/reminder.md'
+      - Classes: 'reference/classes.md'
+      - Events: 'reference/events.md'
+      - Debug: 'reference/debug.md'
+
+markdown_extensions:
+  - def_list
+  - admonition
+  - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - codehilite
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - mkdocstrings:
+      default_handler: python
+      enable_inventory: true
+      handlers:
+        python:
+
+          import:
+            - https://docs.python.org/3/objects.inv
+          paths: [.., ../twitch/ext]
+          options:
+            inherited_members: true
+            show_source: false
+            show_root_toc_entry: true
+            show_root_heading: true
+            show_root_full_path: false
+            members_order: source
+            annotations_path: source
+            docstring_style: numpy
+            docstring_section_style: spacy
+            separate_signature: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            show_bases: true
+            filters:
+              - "!^_"
